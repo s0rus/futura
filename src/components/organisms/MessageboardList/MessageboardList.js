@@ -1,13 +1,19 @@
 import React from 'react';
-import MessageboardListHandle from 'components/molecules/MessageboardListHandle/MessageboardListHandle';
 import MessageboardLink from 'components/molecules/MessageLink/MessageboardLink';
 import { messageboards } from 'mocks/messageboards';
 import { MessageboardListItems, Wrapper } from './MessageboardList.styles';
+import SectionHandle from 'components/molecules/SectionHandle/SectionHandle';
+import { Button } from 'components/atoms/Button/Button';
+import { ReactComponent as PlusIcon } from 'assets/icons/plus-square.svg';
 
 const MessageboardList = () => {
   return (
     <Wrapper>
-      <MessageboardListHandle />
+      <SectionHandle title="Your message boards:">
+        <Button label="ADD NEW BOARD">
+          <PlusIcon />
+        </Button>
+      </SectionHandle>
       <MessageboardListItems>
         {messageboards.map((messageboard, index) => (
           <li key={index}>

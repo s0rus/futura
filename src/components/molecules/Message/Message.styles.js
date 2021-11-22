@@ -13,6 +13,16 @@ export const Wrapper = styled.li`
   color: ${({ theme: { colors }, isUnlocked }) => (isUnlocked ? colors.secondary : colors.primary)};
   border: 2px solid ${({ theme: { colors }, isUnlocked }) => !isUnlocked && colors.primary};
   border-radius: 10px;
+
+  svg.locked {
+    path {
+      fill: ${({ theme: { colors } }) => colors.primary};
+    }
+  }
+
+  &:first-child {
+    margin: 0 0 8px 0;
+  }
 `;
 
 export const LockedLabel = styled.span`

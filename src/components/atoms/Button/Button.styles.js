@@ -31,5 +31,5 @@ export const StyledButton = styled.button`
 
   background-color: ${({ isMinified }) => isMinified && 'transparent'};
   color: ${({ theme: { colors }, isMinified }) => isMinified && colors.primary};
-  border: 2px solid ${({ theme: { colors }, isMinified }) => isMinified && colors.primary};
+  border: 2px solid ${({ theme: { colors }, isMinified, isPrimary }) => (isMinified && isPrimary ? colors.secondary : colors.primary)};
 `;

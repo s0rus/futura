@@ -1,12 +1,14 @@
-import UserHandle from 'components/molecules/UserHandle/UserHandle';
 import React from 'react';
-import { Logo, Wrapper } from './NavigationBar.styles';
+import { Logo, MenuWrapper, Wrapper } from './NavigationBar.styles';
+import { Link } from 'react-router-dom';
 
 const NavigationBar = () => {
   return (
     <Wrapper>
       <Logo>futura</Logo>
-      <UserHandle />
+      <MenuWrapper>
+        <Link to="/messageboards">Messageboards</Link>
+      </MenuWrapper>
     </Wrapper>
   );
 };

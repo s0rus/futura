@@ -23,6 +23,9 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     padding: 0;
     margin: 0;
+    font-weight: bold;
+    color: inherit;
+    position: relative;
   }
 
   a, button {
